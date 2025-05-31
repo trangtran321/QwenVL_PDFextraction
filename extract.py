@@ -35,6 +35,7 @@ def extract_text(dir_path: str):
     3. Extract all contents from a table, keeping the structure of the table intact. 
     Output a response in JSON format with these keys: {"text": str, "figures":[{"fig": int, "caption": str, "description": str, "image": PIL image}], "tables":[{"table_no": int, "caption": str, "data": [][]}}
     For figures, also output a PIL formatted image of the figure you found.
+    4. The pdf might be in two columns. 
     '''
   responses = []
   for file in os.listdir(dir_path):
